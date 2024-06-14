@@ -1,10 +1,7 @@
 package iphone;
 
-
-import java.util.*;
-
 /**
- * 
+ * @author José Gustavo
  */
 public class IPhone implements ReprodutorMusical, Telefone, NavegadorInternet {
 
@@ -14,67 +11,58 @@ public class IPhone implements ReprodutorMusical, Telefone, NavegadorInternet {
     public IPhone() {
     }
 
-    /**
-     * 
-     */
+    @Override
     public void tocar() {
-        // TODO implement here
+        System.out.println("Tocando musica...");
     }
 
-    /**
-     * 
-     */
+    @Override
     public void pausar() {
-        // TODO implement here
+        System.out.println("Musica pausada.");
     }
 
     /**
      * @param musica
      */
+    @Override
     public void selecionarMusica(String musica) {
-        // TODO implement here
+        System.out.println("Tocar "+ musica);
     }
 
     /**
      * @param nome
      */
+    @Override
     public void ligar(String nome) {
-        // TODO implement here
+        System.out.println("Ligando para "+ nome);
     }
 
-    /**
-     * 
-     */
+    @Override
     public void atender() {
-        // TODO implement here
+        System.out.println("Atendendo...");
     }
 
-    /**
-     * 
-     */
+    @Override
     public void iniciarCorreioVoz() {
-        // TODO implement here
+        System.out.println("Iniciar correio de voz");
     }
 
     /**
      * @param url
      */
+    @Override
     public void exibirPagina(String url) {
-        // TODO implement here
+        System.out.println("Acessar "+url);
     }
 
-    /**
-     * 
-     */
+    @Override
     public void adicionarNovaAba() {
-        // TODO implement here
+        System.out.println("Adcionando nova aba...");
     }
 
-    /**
-     * 
-     */
+    @Override
     public void atualizarPagina() {
-        // TODO implement here
+        System.out.println("Atualizando pagina...");
     }
 
 }

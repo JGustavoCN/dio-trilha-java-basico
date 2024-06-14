@@ -1,21 +1,12 @@
 package iphone;
 
-
-import java.util.*;
-
 /**
- * 
+ * @author José Gustavo
  */
 public interface ReprodutorMusical {
 
-    /**
-     * 
-     */
     public void tocar();
 
-    /**
-     * 
-     */
     public void pausar();
 
     /**

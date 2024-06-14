@@ -1,10 +1,7 @@
 package iphone;
 
-
-import java.util.*;
-
 /**
- * 
+ * @author José Gustavo
  */
 public interface Telefone {
 
@@ -13,14 +10,8 @@ public interface Telefone {
      */
     public void ligar(String nome);
 
-    /**
-     * 
-     */
     public void atender();
 
-    /**
-     * 
-     */
     public void iniciarCorreioVoz();
 
 }
