@@ -88,7 +88,7 @@ tomcat
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
 *.nb-gradle/
-*.xml
+build.xml
 *.mf
 # OS
 *.DS_Store
