@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>dio.bootcamp.santander</groupId>
+    <artifactId>BancoDigital</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <exec.mainClass>dio.bootcamp.santander.bancodigital.BancoDigital</exec.mainClass>
+        <!-- Nescessario adicionar a linha abaixo -->
+        <src.dir>src/main/java</src.dir>
+    </properties>
+    <profiles>
+        <!-- Nescessario adicionar o profile abaixo -->
+        <profile>
+            <id>lombok-build</id>
+            <properties>
+                <src.dir>${project.build.directory}/generated-sources/delombok</src.dir>
+            </properties>
+        </profile>
+    </profiles>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <!-- Nescessario adicionar a linha abaixo -->
+        <sourceDirectory>${src.dir}</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.18.20.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>delombok</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>src/main/java</sourceDirectory>
+                            <addOutputDirectory>false</addOutputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin> 
+        </plugins>
+    </build>
+</project>
