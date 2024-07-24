@@ -1,0 +1,10 @@
+## YAML Template.
+---
+spring:
+  profiles:
+    active: dev
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
